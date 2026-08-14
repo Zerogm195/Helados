@@ -122,10 +122,10 @@ async function main() {
             <h2 id="t_${helados}">${helados}</h2>
         </img>
 
-        <button onclick="mas(event);" class="H_${helados}" id="B_mas">+</button>
-        <button onclick="menos(event);" class="H_${helados}" id="B_menos">-</button>
+        <button type="submit" onclick="mas(event);" class="H_${helados}" id="B_mas">+</button>
+        <button type="submit" onclick="menos(event);" class="H_${helados}" id="B_menos">-</button>
         <input class="Cc_cantidad" id="Cc_${helados}" type="text" value=${vasos[helados]}></input>
-        <button onclick="enviar(event);" class="H_${helados}" id="B_enviar">-></button>
+        <button onclick="enviar(event);" type="submit" class="H_${helados}" id="B_enviar">-></button>
         </div>
         `
 
