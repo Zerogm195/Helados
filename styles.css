@@ -39,6 +39,13 @@ body {
     font-size: 1.2rem;
 }
 
+.titulo{
+    font-size: 2.2rem;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
 #I_H_Mora,
 #I_H_Fresa,
 #I_H_Vainilla,
