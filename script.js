@@ -77,6 +77,7 @@ async function enviar(evento) {
 
     console.log(`Actualizado : [Helado : ${quien_presiono}] [Cantidad : ${datos.Helados_Vaso[quien_presiono]}]`);
     
+    location.reload();
 
 }
 
