@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #1a1a1a;
+    --card: #343434;
+    --border: rgb(21, 21, 21);
+    --text: white;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Comic Relief", system-ui, sans-serif;
+}
+
+body {
+    padding: clamp(12px, 2vw, 24px);
+}
+
+.Cc_cantidad{
+    background-color: #fdfdfd;
+    text-align: center;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #101010;
+    width: 100%;
+    max-width: 180px;
+    min-height: 38px;
+    font-size: 1.2rem;
+}
+
+#I_H_Mora,
+#I_H_Fresa,
+#I_H_Vainilla,
+#I_H_Chocolate,
+#I_H_Oreo,
+#I_H_Durazno,
+#I_H_Tres-Leches,
+#I_H_Chicle {
+    width: 60%;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#vasos_c {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: clamp(14px, 2vw, 26px);
+    justify-items: center;
+    align-items: stretch;
+}
+
+#B_mas, #B_menos, #B_enviar {
+    width: 100%;
+    max-width: 180px;
+    min-height: 38px;
+    text-align: center;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgb(125, 255, 136);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 10px rgb(82, 82, 82);
+    color: white;
+    font-weight: bolder;
+    border-color: #2b2b2b;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#B_menos{
+    background-color: #ff5454;
+}
+#B_enviar{
+    background-color: #6ac1fa;
+}
+#B_menos:hover{
+    background-color: #d5473a;
+}
+#B_mas:hover{
+    background-color: rgb(103, 215, 90);
+}
+#B_enviar:hover{
+    background-color: #5a87e1;
+}
+
+
+.cl_Mora,
+.cl_Tres-Leches,
+.cl_Fresa,
+.cl_Oreo,
+.cl_Vainilla,
+.cl_Chicle,
+.cl_Durazno {
+    background-color: var(--card);
+    border-radius: clamp(18px, 3vw, 30px);
+    border: 2px solid var(--border);
+    box-shadow: 0px 5px 10px rgb(82, 82, 82);
+    text-shadow: 2px 2px 4px var(--shadow);
+
+    width: min(100%, 220px);
+    width: 80%;
+    min-height: 210px;
+    aspect-ratio: 1 / 1.15;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 12px 10px;
+}
+
+#vasos_c img {
+    width: 60%;
+    max-width: 110px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#vasos_c h2 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    #vasos_c {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+
+    .cl_Mora,
+    .cl_Tres-Leches,
+    .cl_Fresa,
+    .cl_Oreo,
+    .cl_Vainilla,
+    .cl_Chicle,
+    .cl_Durazno {
+        width: 100%;
+        min-height: 180px;
+        padding: 12px 48px;
+        gap:0px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 10px;
+    }
+
+    #vasos_c {
+        grid-template-columns: 1fr;
+    }
+
+    .cl_Mora,
+    .cl_Tres-Leches,
+    .cl_Fresa,
+    .cl_Oreo,
+    .cl_Vainilla,
+    .cl_Chicle,
+    .cl_Durazno {
+        width: min(100%, 240px);
+    }
+
+    #B_mas, #B_menos, #B_enviar {
+        max-width: 100%;
+    }
+}
